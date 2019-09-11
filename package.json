@@ -2,7 +2,7 @@
   "name": "nuxt-ssr-lifecycle",
   "version": "1.0.0",
   "description": "My geometric Nuxt.js project",
-  "author": "miyazakiyasunari",
+  "author": "nuxt-ssr-lifecycle",
   "private": true,
   "scripts": {
     "dev": "nuxt",

@@ -1,22 +1,15 @@
 # nuxt-ssr-lifecycle
 
-> My geometric Nuxt.js project
+nuxtのライフサイクルを勉強するためのもの
 
-## Build Setup
+Docker version 19.03.2, build 6a30dfc
+node:12.5.0
+Nuxt.js v2.9.2                            │
+
+## 環境構築
 
 ``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+$ docker-compose build
+$ docker-compose up -d
+$ open http://localhost:3333
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
