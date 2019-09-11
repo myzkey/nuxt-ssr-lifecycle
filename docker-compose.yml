@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build:
+      context: ./
+    privileged: true
+    volumes:
+      - "./:/app"
+    ports:
+      - 3333:3000
+    container_name: "nuxt_ssr_lifecycle"
+    tty: true
