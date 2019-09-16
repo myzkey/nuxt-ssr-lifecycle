@@ -8,6 +8,13 @@
     </div>
     <BeforeSample />
     <Sample />
+    <input
+      type="text"
+      name="hoge"
+      v-model="hoge"
+    />
+    <p v-if="hoge">{{ hoge }}</p>
+    <nuxt-link to="csr">link</nuxt-link>
   </section>
 </template>
 
@@ -77,6 +84,38 @@ export default {
       console.log(this.computedHoge())
     } else {
       console.log(`CSR in mounted | `, this.hoge, this.computedHoge)
+    }
+  },
+  beforeUpdate() {
+    if (process.server) {
+      console.log(`SSR in beforeUpdate | `, this.hoge, this.computedHoge)
+      console.log(this.computedHoge())
+    } else {
+      console.log(`CSR in beforeUpdate | `, this.hoge, this.computedHoge)
+    }
+  },
+  updated() {
+    if (process.server) {
+      console.log(`SSR in updated | `, this.hoge, this.computedHoge)
+      console.log(this.computedHoge())
+    } else {
+      console.log(`CSR in updated | `, this.hoge, this.computedHoge)
+    }
+  },
+  beforeDestroy() {
+    if (process.server) {
+      console.log(`SSR in beforeDestroy | `, this.hoge, this.computedHoge)
+      console.log(this.computedHoge())
+    } else {
+      console.log(`CSR in beforeDestroy | `, this.hoge, this.computedHoge)
+    }
+  },
+  destroyed() {
+    if (process.server) {
+      console.log(`SSR in destroyed | `, this.hoge, this.computedHoge)
+      console.log(this.computedHoge())
+    } else {
+      console.log(`CSR in destroyed | `, this.hoge, this.computedHoge)
     }
   },
   computed: {
