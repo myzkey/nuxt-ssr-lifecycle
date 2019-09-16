@@ -6,16 +6,22 @@
         nuxt-ssr-lifecycle 検証
       </h1>
     </div>
+    <BeforeSample />
+    <Sample />
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Sample from '~/components/Sample.vue'
+import BeforeSample from '~/components/BeforeSample.vue'
 
 export default {
   middleware: 'pageMiddleware',
   components: {
-    Logo
+    Logo,
+    Sample,
+    BeforeSample
   },
   data() {
     return {
