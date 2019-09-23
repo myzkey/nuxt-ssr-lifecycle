@@ -120,6 +120,7 @@ export default {
   },
   computed: {
     computedHoge () {
+      console.log("computed")
       return `computed_${this.hoge}`
     }
   }
